@@ -7,7 +7,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-        //Skapat en map för att skippa behöva ha lång if sats eller switch sats. utan istället låta if satsen leta igenom min hashmap med hjälp av nycklar.
+        //Skapat en map för att skippa behöva ha lång if sats eller switch sats. Utan istället låta if satsen leta igenom min hashmap med hjälp av nycklar.
         Map<String, Plant> plants = new HashMap<>();
         plants.put("IGGE", new Cactus("Igge", 0.2));
         plants.put("LAURA", new Palm("Laura", 5.0));
@@ -32,7 +32,12 @@ public class Main {
 
 
             } else {
-                System.out.println("okänt val, försök igen!");
+                System.out.println("okänt val, Dessa plantor har vi inne just nu");
+                for (Plant p : plants.values()){
+                    System.out.println(p.getPlantName());
+
+                }
+                break;
             }
 
         }
